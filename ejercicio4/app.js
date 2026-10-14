@@ -30,4 +30,3 @@ let estaLloviendo=false;
 let puedSalirSinParaguas=!estaLloviendo;
 
 console.log(puedoSalirSinParaguas);
-

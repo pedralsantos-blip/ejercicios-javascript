@@ -24,3 +24,26 @@ console.log(division);//division ahora vale 8.333333333333334//
 //operador de modulo//
 let modulo=precio%cantidad;
 console.log(modulo);//resto de la division de precio entre la cantidad//
+
+//IVA//
+let iva=(precio*21)/100;//precio * 0,21//
+console.log(iva);//iva ahora vale 5.25
+
+let precioTotal=precio+iva;
+console.log(precioTotal);//precioTotal ahora vale 30.25
+
+
+//operadores de asignación//
+let carrito;
+carrito=0;
+console.log(carrito);//carrito ahora vale 0//
+
+carrito-=5;//carrito ahora vale -5//
+console.log(carrito);//carrito vale 0//
+
+
+
+
+
+
+

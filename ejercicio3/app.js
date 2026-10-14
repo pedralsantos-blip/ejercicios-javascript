@@ -41,9 +41,3 @@ console.log(carrito);//carrito ahora vale 0//
 carrito-=5;//carrito ahora vale -5//
 console.log(carrito);//carrito vale 0//
 
-
-
-
-
-
-

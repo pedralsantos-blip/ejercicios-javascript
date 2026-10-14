@@ -7,6 +7,6 @@ c=a<b;
 console.log(c);
 
 let d;
-d= a!==b;
-console.log(d); /// true///9
+d= 7!=="7";///esta evita conversiones///
+console.log(d); /// true///
 

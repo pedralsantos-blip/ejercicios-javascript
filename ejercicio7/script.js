@@ -1,28 +1,51 @@
-//crea datos para edad, plazas disponibles, precio y si es estudiante.Muestra 
-const edad = 33;
-const plazasDisponibles = 3;
-const precio = 20;
+// Paso 1: datos
+const edad = 20;
+const plazas = 3;
+const precio = 25;
 const esEstudiante = true;
 
+// Mostrar en el HTML
 document.getElementById("edad").textContent = edad;
-document.getElementById("plazas").textContent = plazasDisponibles;
-document.getElementById("precio").textContent = `${precio} €`;
+document.getElementById("plazas").textContent = plazas;
+document.getElementById("precio").textContent = precio + " €";
 
+// Mostrar en la consola
+console.log("Edad:", edad);
+console.log("Plazas:", plazas);
+console.log("Precio:", precio + " €");
+console.log("Es estudiante:", esEstudiante);
+
+// Paso 2: plazas
 const mensajePlazas = document.getElementById("mensaje-plazas");
-if (plazasDisponibles < 5) {
+
+if (plazas < 5) {
   mensajePlazas.textContent = "¡Últimas plazas!";
 } else {
   mensajePlazas.textContent = "Plazas disponibles";
 }
+console.log(mensajePlazas.textContent);
 
+// Paso 3: edad
 const mensajeEdad = document.getElementById("mensaje-edad");
+
 if (edad >= 18) {
   mensajeEdad.textContent = "Puedes realizar la reserva";
 } else {
-  mensajeEdad.textContent = "Debes ser mayor de edad";
+  mensajeEdad.textContent = "No puedes realizar la reserva (eres menor de edad)";
 }
+console.log(mensajeEdad.textContent);
 
-const mensajeDescuento = esEstudiante
+// Paso 4: descuento con ternario
+const mensajeDescuento = document.getElementById("mensaje-descuento");
+
+mensajeDescuento.textContent = esEstudiante
   ? "Tienes descuento de estudiante"
   : "Precio estándar";
-document.getElementById("mensaje-descuento").textContent = mensajeDescuento;
+console.log(mensajeDescuento.textContent);
+
+
+
+
+
+
+

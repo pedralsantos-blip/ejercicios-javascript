@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <header>
+        <h1>Mi primera tienda con JavaScript</h1>
+        <p>Vamos a utilizar variables y operadores para calcular el importe de una compra y comprobar si el cliente tiene derecho a descuentos.</p>
+    </header>
+    <main>
+        <section>
+            <h2>1. Calcula el precio de la compra</h2>
+            <p>Nuestro cliente ha comprado:</p>
+            <ul>
+                <li>2 pantalones de 30 € cada uno.</li>
+                <li>1 camiseta de 15 €.</li>
+            </ul>
+            <p>Declara las variables necesarias en JavaScript y calcula el importe total de los productos.</p>
+            <p class="resultado">El importe de la compra es: <strong><span id="total"></span> €</strong></p>
+        </section>
+        <section>
+            <h2>2. Añade los gastos de envío</h2>
+            <p>La tienda cobra 5 € de gastos de envío por cada pedido.</p>
+            <p class="resultado">El total con gastos de envío es: <strong><span id="totalConEnvio"></span> €</strong></p>
+        </section>
+        <section>
+            <h2>3. Comprueba si tiene descuento</h2>
+            <p>Hay descuento si el importe de productos supera 100 € o si compra más de 3 artículos.</p>
+            <p class="resultado">¿Tiene derecho al descuento? <strong><span id="descuento"></span></strong></p>
+        </section>
+        <section>
+            <h2>4. Comprueba el descuento adicional</h2>
+            <p>Hay descuento adicional si pertenece al club de fidelidad y hoy es viernes.</p>
+            <p>Para esta compra, el cliente pertenece al club de fidelidad y hoy es viernes.</p>
+            <p class="resultado">¿Tiene derecho al descuento adicional? <strong><span id="descuentoAdicional"></span></strong></p>
+        </section>
+        <section>
+            <h2>5. Comprueba tu programa</h2>
+            <p>Declara las variables, realiza los cálculos, comprueba las promociones y muestra los resultados con <code>getElementById()</code> y <code>textContent</code>.</p>
+        </section>
+        <section>
+            <h2>Para seguir practicando</h2>
+            <p>Modifica las cantidades, precios y datos del cliente para conseguir que los dos descuentos devuelvan true. Después cambia un dato para que el descuento adicional devuelva false.</p>
+        </section>
+    </main>
+</body>
+</html>

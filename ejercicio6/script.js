@@ -1,13 +1,6 @@
 let cantidadPantalones = 2;
-if (cantidadPantalones >= 5) {
-  console.log("tenemos stock");
-}
 let precioPantalon = 30;
-
 let cantidadCamisetas = 1;
-if (cantidadCamisetas >= 5) {
-  console.log("tenemos stock");
-}
 let precioCamiseta = 15;
 let total = (cantidadPantalones * precioPantalon) + (cantidadCamisetas * precioCamiseta);
 document.getElementById("total").textContent = total;

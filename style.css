@@ -1,0 +1,86 @@
+.ejercicios {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.ejercicios__titulo {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+/* Cuadrícula: 3 columnas en escritorio */
+.ejercicios__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Tablet: 2 columnas */
+@media (max-width: 900px) {
+  .ejercicios__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Móvil: 1 columna */
+@media (max-width: 600px) {
+  .ejercicios__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card */
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.card__numero {
+  align-self: flex-start;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+.card__titulo {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+}
+
+.card__texto {
+  margin: 0 0 16px;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* El enlace siempre queda abajo, aunque los textos tengan distinta longitud */
+.card__enlace {
+  margin-top: auto;
+  align-self: flex-start;
+  padding: 8px 16px;
+  background: #2563eb;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.card__enlace:hover {
+  background: #1d4ed8;
+}

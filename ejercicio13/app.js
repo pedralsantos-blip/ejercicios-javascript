@@ -1,4 +1,3 @@
 function saludar() {
-    document.getElementById("saludo").textContent="hola mundo";
-
+  document.getElementById("saludo").textContent = "hola mundo";
 }

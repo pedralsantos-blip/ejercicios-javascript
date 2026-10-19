@@ -1,3 +1,6 @@
+
+
+
 function evaluarNota() {
   const nombre = document.getElementById("nombre").value;
   const notaTexto = document.getElementById("nota").value;

@@ -5,19 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
      <script defer src="app.js"></script>   
- <link rel="stylesheet" href="style.css">  
+        <link rel="stylesheet" href="style.css">  
  </head>
  <body>
-     <!-- Parte A: El nombre -->
-  <h2>Parte A. El nombre</h2>
-  <input type="text" id="nombre" placeholder="Escribe tu nombre">
-  <button onclick="saludar()">Saludar</button>
-  <p>Mensaje: <span id="saludo"></span></p>
+   <h1>Nombre y edad</h1>
 
+  <!-- Parte A: El nombre -->
+  <section>
+    <h2>Parte A. El nombre</h2>
+    <label for="nombre">Escribe tu nombre</label>
+    <input type="text" id="nombre" placeholder="Ej: Pedro">
+    <button onclick="mostrar('saludo', saludar())">Saludar</button>
+    <p>Mensaje: <span id="saludo"></span></p>
+  </section>
   <!-- Parte B: La edad -->
-  <h2>Parte B. La edad</h2>
-  <input type="number" id="edad" placeholder="Escribe tu edad">
-  <button onclick="edad()">Mostrar edad</button>
-  <p>Tu edad es: <span id="mostrarEdad"></span></p>
+  <section>
+    <h2>Parte B. La edad</h2>
+    <label for="edadUsuario">Escribe tu edad</label>
+    <input type="number" id="edadUsuario" placeholder="Ej: 30">
+    <button onclick="mostrar('mostrarEdad', edad())">Mostrar edad</button>
+    <p>Resultado: <span id="mostrarEdad"></span></p>
+  </section>
  </body>
  </html>

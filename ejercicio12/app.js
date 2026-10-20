@@ -1,11 +1,18 @@
+function saludar() {
+  const nombre = document.getElementById("nombre").value;
+  return `¡Hola, ${nombre}! Bienvenido.`;
+}
 
-    function saludar() {
-      const nombre = document.getElementById("nombre").value;
-      document.getElementById("saludo").textContent = `¡Hola, ${nombre}! Bienvenido.`;
-    }
+function edad() {
+  const valor = Number(document.getElementById("edadUsuario").value);
 
-    function edad() {
-      const valor = document.getElementById("edad").value;
-      document.getElementById("mostrarEdad").textContent = valor;
-    }
- 
+  if (valor >= 18) {
+    return `Tienes ${valor} años. Eres mayor de edad`;
+  } else {
+    return `Tienes ${valor} años. Eres menor de edad`;
+  }
+}
+
+function mostrar(idSpan, texto) {
+  document.getElementById(idSpan).textContent = texto;
+}

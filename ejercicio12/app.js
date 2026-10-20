@@ -1,14 +1,11 @@
-//function suma(a, b) {
- // const resultado = a + b;
-  //console.log(resultado);
-///
 
-suma(3, 4); // 7
-suma(4, 4); // 8
+    function saludar() {
+      const nombre = document.getElementById("nombre").value;
+      document.getElementById("saludo").textContent = `¡Hola, ${nombre}! Bienvenido.`;
+    }
 
-
-function saludar(nombre){
-    nombre=prompt("introduce tu nombre");
-    document.getElementById("saludo").textContent="Hola"+nombre+"!";
-    console.log("Hola, "+nombre+"!")
-}
+    function edad() {
+      const valor = document.getElementById("edad").value;
+      document.getElementById("mostrarEdad").textContent = valor;
+    }
+ 

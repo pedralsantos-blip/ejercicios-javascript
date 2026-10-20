@@ -1,13 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script defer src="app.js"></script>
-</head>
-<body>
-    <p id="saludo"></p>
-    <button onclick="saludar()">Lamar a la funcion saludar</button>
-</body>
-</html>
+     <script defer src="app.js"></script>   
+ <link rel="stylesheet" href="style.css">  
+ </head>
+ <body>
+     <!-- Parte A: El nombre -->
+  <h2>Parte A. El nombre</h2>
+  <input type="text" id="nombre" placeholder="Escribe tu nombre">
+  <button onclick="saludar()">Saludar</button>
+  <p>Mensaje: <span id="saludo"></span></p>
+
+  <!-- Parte B: La edad -->
+  <h2>Parte B. La edad</h2>
+  <input type="number" id="edad" placeholder="Escribe tu edad">
+  <button onclick="edad()">Mostrar edad</button>
+  <p>Tu edad es: <span id="mostrarEdad"></span></p>
+ </body>
+ </html>

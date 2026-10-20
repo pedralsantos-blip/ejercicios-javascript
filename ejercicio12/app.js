@@ -14,3 +14,10 @@ function edad() {
 function mostrar(idSpan, texto) {
   document.getElementById(idSpan).textContent = texto;
 }
+
+//multiplicar * 5//
+//function multiplicar(numero) {
+  //  return numero *5;
+    
+//}
+//console.log(multiplicar(2));

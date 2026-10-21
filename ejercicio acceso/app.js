@@ -6,7 +6,6 @@ function comprobarAcceso(edad) {
     return "⛔ No puedes entrar";
   }
 }
-
 // Se ejecuta al pulsar el botón
 function mostrarResultado() {
   const campo = document.getElementById("edad");
@@ -17,7 +16,6 @@ function mostrarResultado() {
     resultado.className = "";
     return;
   }
-
   const edad = Number(campo.value);
   const mensaje = comprobarAcceso(edad);
 

@@ -74,6 +74,6 @@
       font-size: 1.3rem;
       font-weight: bold;
     }
-    #resultado.permitido { color: #5dff9a; }
-    #resultado.denegado { color: #ff6b6b; }
+    #resultado.permitido { color: #03fc62; }
+    #resultado.denegado { color: #ef0a0a; }
   

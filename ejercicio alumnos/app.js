@@ -1,3 +1,9 @@
-let alumnos=[Ana,Luis,Marta];
-let notas:[8,4,7];
+let alumnos=[];
+let notas=[];
+
+function guardarAlumno(){
+    let nombre=document.getElementById("nombre").value;
+    let nota=document.getElementById("nota").value;
+} 
+
 

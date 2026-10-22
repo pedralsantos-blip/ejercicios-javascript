@@ -1,16 +1,14 @@
 let alumnos=[];
 let notas=[];
-
 function guardarAlumno(){
     let nombre=document.getElementById("nombre").value;
     let nota=document.getElementById("nota").value;
-} 
- if (nombre === "") {
-    document.getElementById("mensaje").textContent = "Escribe un nombre.";
-    return;
-  }
-  if (textoNota === "" || nota < 0 || nota > 10) {
-    document.getElementById("mensaje").textContent = "Escribe una nota entre 0 y 10.";
-    return;
-  }
+    alumnos.push(nombre);
+    notas.push(nota);
+//muestra la cantidad de alumnos dentro del array alumnos
+document.getElementById("contador").textContent="Alumnos registrados: "+alumnos.length;
+//muestra las notas del array nota al pulsa mostrar notas
+document.getElementById("mensaje").textContent="Notas del alumno: "+notas;
 
+
+}

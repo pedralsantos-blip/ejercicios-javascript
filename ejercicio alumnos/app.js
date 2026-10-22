@@ -7,9 +7,7 @@ function guardarAlumno(){
     notas.push(nota);
 //muestra la cantidad de alumnos dentro del array alumnos
 document.getElementById("contador").textContent="Alumnos registrados: "+alumnos.length;
-
 }
-
 //muestra las notas del array nota al pulsa mostrar notas
 function mostrarNotas(){}
     let mensaje="";

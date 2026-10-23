@@ -1,0 +1,19 @@
+let alumnos=[];
+let notas=[];
+//muestra la cantidad de alumnos dentro del array alumnos
+function guardarAlumno(){
+    let nombre=document.getElementById("nombre").value;
+    let nota=document.getElementById("nota").value;
+    alumnos.push(nombre);
+    notas.push(nota);
+
+document.getElementById("contador").textContent="Alumnos registrados: "+alumnos.length;
+}
+//muestra las notas del array nota al pulsa mostrar notas
+function mostrarNotas(){
+    let mensaje="";
+    for(let i=0; i<alumnos.length; i++){
+        mensaje+=alumnos[i]+":"+notas[i];
+    }
+       document.getElementById("mensaje").textContent+=mensaje+"\n";
+}

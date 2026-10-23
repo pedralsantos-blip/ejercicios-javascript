@@ -1,0 +1,18 @@
+.cuaderno {
+  background-color: white;
+  color: #17325c;
+  padding: 24px;
+  margin: 24px auto;
+  border: 1px solid #d5dce8;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 540px;
+  text-align: center;
+}
+.cuaderno input, .cuaderno button {
+  padding: 10px;
+  margin: 6px;
+  border: 1px solid #17325c;
+  border-radius: 6px;
+}
+#resultado { white-space: pre-line; }

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="cuaderno">
+  <h1>Cuaderno de notas</h1>
+  <label>Nombre <input id="nombre" type="text"></label>
+  <label>Nota <input id="nota" type="number"></label>
+  <button onclick="guardarAlumno()">Guardar alumno</button>
+  <p id="contador">Alumnos registrados: 0</p>
+  <button onclick="mostrarNotas()">Mostrar notas</button>
+  <p id="mensaje"></p>
+  <p id="resultado"></p>
+</main>
+</body>
+</html>

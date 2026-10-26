@@ -1,4 +1,4 @@
-// Elementos del HTML
+
 let boton = document.getElementById("lanzar");
 let mensaje = document.getElementById("mensaje");
 let historial = document.getElementById("historial");

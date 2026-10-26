@@ -42,3 +42,9 @@ console.log(exist);
 //reduce: acumulador de precios-->muestra el total del carrito
 const total=precios.reduce((suma,precio)=>suma+precio,0);
 console.log("Total de precios:"+total);
+
+// splice(posición, cuántos eliminar)
+let carrito = ["Pan", "leche", "huevos", "azucar"];
+let eliminado = carrito.splice(1, 1);
+console.log("Elemento eliminado:", eliminado);
+console.log("Carrito actual:", carrito);

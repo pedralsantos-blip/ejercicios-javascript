@@ -48,3 +48,7 @@ let carrito = ["Pan", "leche", "huevos", "azucar"];
 let eliminado = carrito.splice(1, 1);
 console.log("Elemento eliminado:", eliminado);
 console.log("Carrito actual:", carrito);
+
+// splice(posición, 0, elementos a insertar...)
+carrito.splice(1, 0, "mantequilla", "queso", "tomate");
+console.log("Carrito actualizado:", carrito);

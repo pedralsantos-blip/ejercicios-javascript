@@ -1,45 +1,34 @@
 let producto = {
     nombre: "Ambulia",
-    precio: 6,
-    cantidad: 1,
-    disponible: true,
-    calcularTotalProducto: function () {
-        return this.precio * this.cantidad;
+    tallas: [
+        { nombre: "Esqueje", precio: 4.99 },
+        { nombre: "Maceta", precio: 6 },
+        { nombre: "InVitro", precio: 8.5 },
+        { nombre: "Planta madre", precio: 15 }
+    ],
+    calcularTotal: function (precioTalla, cantidad) {
+        return precioTalla * cantidad;
     }
 };
-console.log(producto);
 
-// Accediendo a las propiedades del objeto
-console.log(producto.nombre);
-console.log(producto.precio);
-console.log(producto.disponible);
+// Mostrar las opciones disponibles
+let opciones = producto.tallas.map(t => t.nombre + " (" + t.precio + "€)").join("\n");
 
-// Añadiendo una nueva propiedad: cada talla con su precio
-producto.tallas = [
-    { nombre: "Esqueje", precio: 4.99 },
-    { nombre: "Maceta", precio: 6 },
-    { nombre: "InVitro", precio: 8.5 },
-    { nombre: "Planta madre", precio: 15 }
-];
-console.log(producto.tallas);
+let eleccion = prompt("¿Qué talla quieres?\n" + opciones);
 
-// Recorrer las tallas con función flecha
-producto.tallas.forEach(t => {
-    console.log(t.nombre + ": " + t.precio + "€");
-});
+// Buscar la talla (sin distinguir mayúsculas/minúsculas)
+let talla = producto.tallas.find(t => t.nombre.toLowerCase() === eleccion.toLowerCase());
 
-// Buscar el precio de una talla concreta con función flecha
-const variante = producto.tallas.find(t => t.nombre === "InVitro");
-console.log(variante.precio);
+if (talla) {
+    let cantidad = Number(prompt("¿Cuántas unidades?"));
 
-// Modificar una propiedad del objeto
-producto.precio = 4.99;
-console.log(producto.precio);
-
-// Total del producto
-console.log(producto.calcularTotalProducto());
-
-// Borrar una propiedad del objeto
-delete producto.disponible;
-console.log(producto);
+    if (cantidad > 0) {
+        let total = producto.calcularTotal(talla.precio, cantidad);
+        alert("Total: " + total.toFixed(2) + "€");
+    } else {
+        alert("Cantidad no válida");
+    }
+} else {
+    alert("Esa talla no existe");
+};
 

@@ -1,6 +1,9 @@
 document.getElementById("saludo").textContent="Hola este es un saludo";
 
 
-document.querySelectorAll(".mensaje").forEach(function (p) {
-    p.textContent = "Usando querySelector";
-    });
+let muchosParrafos=document.querySelector("mensaje");
+console.log(muchosParrafos);
+
+muchosParrafos.forEach(parrafo=>{
+    parrafo.textContent="Soy un parrafo capturado por un querySelector"
+});

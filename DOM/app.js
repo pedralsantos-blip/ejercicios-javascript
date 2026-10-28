@@ -1,4 +1,4 @@
 document.getElementById("saludo").textContent="Hola este es un saludo"
 
 
-document.querySelector("#")
+document.querySelector("#mensaje").textContent="Usando querySelector"

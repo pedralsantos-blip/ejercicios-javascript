@@ -1,4 +1,6 @@
-document.getElementById("saludo").textContent="Hola este es un saludo"
+document.getElementById("saludo").textContent="Hola este es un saludo";
 
 
-document.querySelector("#mensaje").textContent="Usando querySelector"
+document.querySelectorAll(".mensaje").forEach(function (p) {
+    p.textContent = "Usando querySelector";
+    });

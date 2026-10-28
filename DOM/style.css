@@ -1,5 +1,7 @@
-.mensaje{
+.mensaje {
     background-color: green;
     padding: 15px;
     font-size: 16px;
+    color: black;
+    margin: 10px 16px;
 }

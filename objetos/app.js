@@ -1,34 +1,55 @@
 let producto = {
     nombre: "Ambulia",
-    tallas: [
-        { nombre: "Esqueje", precio: 4.99 },
-        { nombre: "Maceta", precio: 6 },
-        { nombre: "InVitro", precio: 8.5 },
-        { nombre: "Planta madre", precio: 15 }
-    ],
-    calcularTotal: function (precioTalla, cantidad) {
-        return precioTalla * cantidad;
+    tallas: {
+        "Esqueje": 4.99,
+        "Maceta": 6,
+        "InVitro": 8.5,
+        "Planta madre": 15
     }
 };
 
-// Mostrar las opciones disponibles
-let opciones = producto.tallas.map(t => t.nombre + " (" + t.precio + "€)").join("\n");
+// Lo que quieres comprar (cámbialo a tu gusto)
+let tallaElegida = "Maceta";
+let cantidad = 3;
 
-let eleccion = prompt("¿Qué talla quieres?\n" + opciones);
+// Función que calcula el total
+function calcularTotal(precio, cantidad) {
+    return precio * cantidad;
+}
 
-// Buscar la talla (sin distinguir mayúsculas/minúsculas)
-let talla = producto.tallas.find(t => t.nombre.toLowerCase() === eleccion.toLowerCase());
+// 1. Object.keys → solo los nombres de las tallas
+let nombres = Object.keys(producto.tallas);
+console.log("Tallas disponibles:", nombres);
 
-if (talla) {
-    let cantidad = Number(prompt("¿Cuántas unidades?"));
+// 2. Object.values → solo los precios
+let precios = Object.values(producto.tallas);
+console.log("Precios:", precios);
+console.log("Más barata:", Math.min(...precios) + "€");
+console.log("Más cara:", Math.max(...precios) + "€");
 
-    if (cantidad > 0) {
-        let total = producto.calcularTotal(talla.precio, cantidad);
-        alert("Total: " + total.toFixed(2) + "€");
-    } else {
-        alert("Cantidad no válida");
-    }
+// 3. Object.entries → pares [nombre, precio]
+console.log("--- Lista completa ---");
+Object.entries(producto.tallas).forEach(function (par) {
+    console.log(par[0] + ": " + par[1] + "€");
+});
+
+// Buscamos la talla usando keys (sin distinguir mayúsculas/minúsculas)
+let nombreTalla = nombres.find(function (n) {
+    return n.toLowerCase() === tallaElegida.toLowerCase();
+});
+
+// Comprobamos y mostramos el resultado
+console.log("--- Tu compra ---");
+if (nombreTalla && cantidad > 0) {
+    let precio = producto.tallas[nombreTalla];
+    let total = calcularTotal(precio, cantidad);
+    console.log("Producto: " + producto.nombre);
+    console.log("Talla: " + nombreTalla);
+    console.log("Cantidad: " + cantidad);
+    console.log("Total: " + total.toFixed(2) + "€");
+} else if (!nombreTalla) {
+    console.log("Esa talla no existe");
 } else {
-    alert("Esa talla no existe");
-};
+    console.log("Cantidad no válida");
+}
 

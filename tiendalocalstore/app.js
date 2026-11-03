@@ -9,3 +9,4 @@ const contenedorAlumnos = document.getElementById("alumnos");
 for (const alumno of alumnos) {
   contenedorAlumnos.innerHTML += "Nombre: " + alumno.nombre + " - Edad: " + alumno.edad + "<br>";
 }
+

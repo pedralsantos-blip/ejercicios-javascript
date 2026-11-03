@@ -4,21 +4,13 @@ let alumnos = [
   { nombre: "Andres", edad: 27 }
 ];
 
+// RECUPERAR (una línea)
+alumnos = JSON.parse(localStorage.getItem("alumnosGuardadosLocal")) || alumnos;
+
 const contenedorAlumnos = document.getElementById("alumnos");
 
 function guardarAlumnosLocal() {
-  const alumnosJson = JSON.stringify(alumnos);
-  localStorage.setItem("alumnosGuardadosLocal", alumnosJson);
-  console.log("Guardado:", alumnosJson);
-}
-
-function cargarAlumnosLocal() {
-  const guardados = localStorage.getItem("alumnosGuardadosLocal");
-
-  if (guardados) {
-    alumnos = JSON.parse(guardados);
-    console.log("Cargado:", alumnos);
-  }
+  localStorage.setItem("alumnosGuardadosLocal", JSON.stringify(alumnos));
 }
 
 function mostrarAlumnos() {
@@ -47,5 +39,4 @@ function agregarAlumno() {
   mostrarAlumnos();
 }
 
-cargarAlumnosLocal();
 mostrarAlumnos();

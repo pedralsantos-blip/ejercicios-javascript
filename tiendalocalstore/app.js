@@ -6,7 +6,30 @@ const alumnos = [
 
 const contenedorAlumnos = document.getElementById("alumnos");
 
-for (const alumno of alumnos) {
-  contenedorAlumnos.innerHTML += "Nombre: " + alumno.nombre + " - Edad: " + alumno.edad + "<br>";
+function mostrarAlumnos() {
+  contenedorAlumnos.innerHTML = "";
+
+  for (const alumno of alumnos) {
+    contenedorAlumnos.innerHTML += "Nombre: " + alumno.nombre + " - Edad: " + alumno.edad + "<br>";
+  }
 }
+
+function agregarAlumno() {
+  const nombre = document.getElementById("nombre").value;
+  const edad = document.getElementById("edad").value;
+
+  if (nombre === "" || edad === "") {
+    alert("Rellena el nombre y la edad");
+    return;
+  }
+
+  alumnos.push({ nombre: nombre, edad: Number(edad) });
+
+  document.getElementById("nombre").value = "";
+  document.getElementById("edad").value = "";
+
+  mostrarAlumnos();
+}
+
+mostrarAlumnos();
 

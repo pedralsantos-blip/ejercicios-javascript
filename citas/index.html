@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenda de citas</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <header class="cabecera">
+    <h1>Agenda de citas</h1>
+    <p>Registra, consulta y elimina las citas de tus clientes.</p>
+  </header>
+
+  <main class="contenedor">
+
+    <section class="panel" aria-labelledby="titulo-form">
+      <h2 id="titulo-form">Nueva cita</h2>
+
+      <form id="form-cita" novalidate>
+        <label for="nombre">Nombre del cliente</label>
+        <input type="text" id="nombre" placeholder="Ej: Ana López">
+
+        <label for="fecha">Fecha</label>
+        <input type="date" id="fecha">
+
+        <label for="hora">Hora</label>
+        <input type="time" id="hora">
+
+        <label for="motivo">Motivo</label>
+        <textarea id="motivo" rows="3" placeholder="Breve descripción de la cita"></textarea>
+
+        <button type="submit">Guardar cita</button>
+        <p id="mensaje" role="alert"></p>
+      </form>
+    </section>
+
+    <section class="panel" aria-labelledby="titulo-lista">
+      <h2 id="titulo-lista">Citas registradas</h2>
+      <p class="contador">Total: <strong id="contador">0</strong></p>
+
+      <div id="lista-citas"></div>
+    </section>
+
+  </main>
+
+  <footer class="pie">Agenda de citas · Práctica de HTML, CSS y JavaScript</footer>
+
+</body>
+</html>
